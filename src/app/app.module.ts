@@ -13,7 +13,7 @@ import {HttpModule} from '@angular/http';
     AppComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule, HttpModule,
     MatButtonModule, MatCheckboxModule
    // MaterialModule.forRoot(),
   ],
