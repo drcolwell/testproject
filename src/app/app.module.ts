@@ -1,8 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-
+import { MatButtonModule, MatCheckboxModule } from '@angular/material';
 import { AppComponent } from './app.component';
+
+import { AppService } from './app.service';
+import {HttpModule} from '@angular/http';
 
 
 @NgModule({
@@ -10,9 +13,11 @@ import { AppComponent } from './app.component';
     AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    MatButtonModule, MatCheckboxModule
+   // MaterialModule.forRoot(),
   ],
-  providers: [],
+  providers: [AppService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

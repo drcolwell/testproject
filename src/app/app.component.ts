@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AppService } from './app.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+Catalogs = [];
+  
+constructor(private data: AppService) {}
+  clicked(event) {
+    console.log(event);
+    this.data.getCatalogs()
+      .subscribe(x => {
+        console.log(x);
+        this.Catalogs = x;
+      });
+  }
+
 }
